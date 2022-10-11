@@ -31,7 +31,7 @@ export const projects = [
     description: "Built a feed forward neural networks to play Flappy bird game on its own. Used NEAT(Neuro Evolution of Augmented Topologies) algorithm to opimize the neural network and accomplished this without using any high level API's and only using NumPy library.",
     image: '/images/4.jpeg',
     tags: ['Python', 'NumPy',  'Genetic Algorithm', 'Neural Net'],
-    source: 'https://github.com/prashishpaudel/neuroplay',
+    source: 'https://github.com/prashishpaudel/neuroplay' ,
     visit: 'https://github.com/prashishpaudel/neuroplay',
     id: 3,
   },
