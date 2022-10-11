@@ -32,13 +32,13 @@ const Header = () =>  (
       </li>        
     </Div2>
       <Div3>
-        <SocialIcons href="https://google.com">
+        <SocialIcons href="https://github.com/prashishpaudel" target = "_blank">
           <AiFillGithub size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://google.com">
+        <SocialIcons href="https://linkedin.com/in/prashishpaudel" target = "_blank">
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://google.com">
+        <SocialIcons href="https://instagram.com/prashishpaudel" target = "_blank">
           <AiFillInstagram size="3rem"/>
         </SocialIcons>
       </Div3>

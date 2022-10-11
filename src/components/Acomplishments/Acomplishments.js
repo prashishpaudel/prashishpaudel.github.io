@@ -4,19 +4,19 @@ import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalCompon
 import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
 
 const data = [
-  { number: 20, text: 'Open Source Projects'},
-  { number: 1000, text: 'Students', },
-  { number: 1900, text: 'Github Followers', },
-  { number: 5000, text: 'Github Stars', }
+  { number: 20, text: 'Deep Learning Specialization Certification from DeepLearning.AI'},
+  { number: 1000, text: 'Awarded Graduate Assistantships with Full  Scholarship at UToledo. ', },
+  { number: 1900, text: 'Secured 3rd place in CTF organized by Northwest Ohio ISSA.', },
+  { number: 5000, text: 'Executive member of UToledo Club for Cyber Security', }
 ];
 
 const Acomplishments = () => (
   <Section>
-    <SectionTitle>Personal Achievements</SectionTitle>
+    <SectionTitle>Certification & Awards</SectionTitle>
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>
-          <BoxNum>{`${card.number}+`}</BoxNum>
+          {/* <BoxNum>{`${card.number}+`}</BoxNum> */}
           <BoxText>{card.text}</BoxText>
         </Box>
       ))}

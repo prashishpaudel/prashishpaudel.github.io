@@ -8,8 +8,7 @@ const Technologies = () =>  (
     <SectionDivider divider />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range a technologies in the web development world.
-      From Back-end To Design
+      I've worked with a range a technologies in Machine Learning and Web Developemt.
     </SectionText>
     <List>
       <ListItem>
@@ -17,10 +16,10 @@ const Technologies = () =>  (
           <DiReact size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Programming/ Scripting</ListTitle>
           <ListParagraph>
             Experiece with <br />
-            React.js
+            Python ,PHP ,JS ,C ,C++ , HTML , CSS , VHDL.
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -29,10 +28,10 @@ const Technologies = () =>  (
           <DiFirebase size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
+          <ListTitle>Frameworks & Libraries</ListTitle>
           <ListParagraph>
             Experience with <br />
-            Node and Databases
+            Fat-Free , jQuery , AJAX , Numpy , Pandas , React.Js , Node.Js.
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -41,10 +40,10 @@ const Technologies = () =>  (
           <DiZend size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
+          <ListTitle>Machine/ Deep Learning</ListTitle>
           <ListParagraph>
             Experience with <br />
-            tools like Figma
+            Tensorflow , Keras , NLP , CNN , LSTM , GAN , Transformer , OpenCV
           </ListParagraph>
         </ListContainer>
       </ListItem>
