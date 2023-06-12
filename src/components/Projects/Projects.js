@@ -12,13 +12,14 @@ const Projects = () => (
       {projects.map((p, i) => {
         return (
           <BlogCard key={i}>
-          <Img src={p.image} />
+           <Img src={p.image} /> 
             <TitleContent>
               <HeaderThree title>{p.title}</HeaderThree>
               <Hr />
             </TitleContent>
             <CardInfo className="card-info">{p.description}</CardInfo>
             <div>
+              <br/>
               <TitleContent>Stack</TitleContent>
               <TagList>
                 {p.tags.map((t, i) => {
@@ -35,6 +36,7 @@ const Projects = () => (
       })}
     </GridContainer>
   </Section>
+  
 );
 
 export default Projects;

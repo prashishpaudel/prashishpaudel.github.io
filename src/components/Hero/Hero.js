@@ -13,7 +13,10 @@ const Hero = (props) => (
           Prashish Paudel
         </SectionTitle>
         <SectionText>
-        I'm currently a graduate student at University of Toledo studying Computer Science. My interests lie in Machine Learning research, specially areas related to health care analysis.
+        A Computer Science Masters student at the University of Toledo, I specialize in software development, NLP, and machine learning, and have contributed to research in medical simulations and health care.
+        </SectionText>
+        <SectionText>
+        I'm currently seeking new opportunities to apply my technical expertise and academic insights to tackle new challenges in the field of computer science.
         </SectionText>
         <NavLink href="#tech">
         <Button onClick={props.handleClick}>Learn More</Button>

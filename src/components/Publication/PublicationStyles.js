@@ -5,6 +5,7 @@ export const Img = styled.img`
   height:100%;
   object-fit: cover;
   overflow: hidden;
+  margin-bottom:30px;
 `
 
 export const GridContainer = styled.section`
@@ -27,7 +28,7 @@ export const BlogCard = styled.div`
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
-  min-height: 600px;
+  min-height: 850px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -36,8 +37,6 @@ export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-  font-weight:600;
-  color:#95f5e2;
 
 `;
 
@@ -47,7 +46,7 @@ export const HeaderThree = styled.h3`
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
-  min-height:80px;
+  min-height:160px;
   font-size: ${(props) => props.title ? '2.5rem' : '2rem'};
 `;
 
@@ -77,7 +76,6 @@ export const CardInfo = styled.p`
   font-style: 2rem;
   line-height: 24px;
   text-align: justify;
-  min-height:150px;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding:.3rem
   
@@ -115,3 +113,11 @@ export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
 `
+
+export const ConferenceName = styled.h4`
+  margin:10px;
+  font-weight: 450;
+  color: #a9a9a9;
+  padding: .5rem 0;
+  font-size: 1.5rem;
+`;
