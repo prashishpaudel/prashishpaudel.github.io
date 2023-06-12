@@ -50,7 +50,7 @@ export const publications = [
   {
     title: 'Automated Multimodal Performance Evaluation in Simulation-based Medical Education using Natural Language Processing',
     description: "Designed an innovative, integrative solution for simulation‑based medical education performance assessment. Utilized Natural Language Processing(NLP) coupled with precise physiological data analysis for a comprehensive, holistic multimodal evaluation of learner performance at instructor, learner, and environment level.",
-    image: '/images/prepare.PNG',
+    image: '/images/prepare.png',
     publication:' ACM/IEE 14th International Conference on Cyber-Physical Systems',
     source: 'https://dl.acm.org/doi/10.1145/3576841.3589624',
     id: 0
