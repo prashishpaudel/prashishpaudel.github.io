@@ -7,7 +7,7 @@ const data = [
   { number: 1, text: 'Deep Learning Specialization Certification from DeepLearning.AI'},
   { number: 2, text: 'Awarded Graduate Assistantships with Full  Scholarship at UToledo. ', },
   { number: 3, text: 'Executive member of UToledo Club for Cyber Security', },
-  {number:4, text:'Presneted Poster at ACM/IEE 14th International Conference on Cyber-Physical Systems'}
+  {number:4, text:'Presented Poster at ACM/IEE 14th International Conference on Cyber-Physical Systems'}
 ];
 
 const Acomplishments = () => (

@@ -48,6 +48,9 @@ export const HeaderThree = styled.h3`
   padding: .5rem 0;
   min-height:160px;
   font-size: ${(props) => props.title ? '2.5rem' : '2rem'};
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0 2.5rem;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -77,7 +80,7 @@ export const CardInfo = styled.p`
   line-height: 24px;
   text-align: justify;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
+    padding:2.5rem
   
 }
 `;
@@ -120,4 +123,6 @@ export const ConferenceName = styled.h4`
   color: #a9a9a9;
   padding: .5rem 0;
   font-size: 1.5rem;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 0 2.5rem
 `;

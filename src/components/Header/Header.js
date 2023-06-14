@@ -35,6 +35,11 @@ const Header = () => (
           About
         </NavLink>
       </li>
+      <li>
+      <NavLink href="/files/Resume-PrashishPaudel.pdf" download style={{ display:'flex',alighItems:'center', textDecoration: 'none' }}>
+       Resume <AiOutlineDownload size = "2rem" style={{ marginTop: '5px' ,marginLeft: '5px'}}/>
+      </NavLink>
+    </li>
 
     </Div2>
     <Div3>
@@ -48,11 +53,6 @@ const Header = () => (
         <AiFillInstagram size="3rem" />
       </SocialIcons>
     </Div3>
-    <li>
-      <NavLink href="/files/Resume-PrashishPaudel.pdf" download style={{ display:'flex',alighItems:'center', textDecoration: 'none' }}>
-       Resume <AiOutlineDownload size = "1.8rem" style={{ marginTop: '7px' ,marginLeft: '5px'}}/>
-      </NavLink>
-    </li>
   </Container>
 
 );

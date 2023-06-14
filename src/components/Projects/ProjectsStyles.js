@@ -49,6 +49,9 @@ export const HeaderThree = styled.h3`
   padding: .5rem 0;
   min-height:80px;
   font-size: ${(props) => props.title ? '2.5rem' : '2rem'};
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0 2.5rem;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -79,7 +82,7 @@ export const CardInfo = styled.p`
   text-align: justify;
   min-height:150px;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
+    padding:2.5rem
   
 }
 `;
@@ -110,8 +113,11 @@ export const TagList = styled.ul`
 display: flex;
 justify-content: space-around;
 padding: 2rem;
+flex-wrap: wrap;
+gap: 1rem;
 `
 export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
+
 `
