@@ -38,12 +38,12 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2013, text: 'Started Computer Engineering Degree from Tribhuvan University, Nepal.', },
+  { year: 2013, text: 'Started Computer Engineering Degree at Tribhuvan University, Nepal.', },
   { year: 2017, text: 'Completed Computer Engineering Degree from Tribhuvan University, Nepal.', },
   { year: 2018, text: 'Started working as Software Engineer at FOCUSONE Nepal Pvt.Ltd, Nepal.', },
   { year: 2021, text: 'Started MS in Computer Science at University of Toledo, OH, USA.', },
   { year: 2022, text: 'Worked as Conversational Chatbot Engineer Intern at Quantiphi Inc, MA, USA.', },
-  { year: 2023, text: 'Completed MS in Computer Science at University of Toledo,OH, USA', },
+  { year: 2023, text: 'Completed MS in Computer Science from University of Toledo,OH, USA', },
   
 ];
 
