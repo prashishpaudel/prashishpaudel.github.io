@@ -13,10 +13,10 @@ const Hero = (props) => (
           Prashish Paudel
         </SectionTitle>
         <SectionText>
-        A Computer Science Masters student at the University of Toledo, I specialize in software development, NLP, and machine learning, and have contributed to research in medical simulations and health care.
+        A software engineer at Blink Voice with a Master's in Computer Science from the University of Toledo, I specialize in full-stack development, NLP, and AI. My work spans from innovative communication solutions to medical simulation assessment platforms. I'm passionate about leveraging technology to enhance user experiences and solve complex problems.
         </SectionText>
         <SectionText>
-        I'm currently seeking new opportunities to apply my technical expertise and academic insights to tackle new challenges in the field of computer science.
+        Currently, I'm exploring the intersection of VoIP and AI to revolutionize digital communication.
         </SectionText>
         <NavLink href="#tech">
         <Button onClick={props.handleClick}>Learn More</Button>

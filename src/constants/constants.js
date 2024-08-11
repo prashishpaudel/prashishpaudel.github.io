@@ -44,7 +44,7 @@ export const TimeLineData = [
   { year: 2021, text: 'Started MS in Computer Science at University of Toledo, OH, USA.', },
   { year: 2022, text: 'Worked as Conversational Chatbot Engineer Intern at Quantiphi Inc, MA, USA.', },
   { year: 2023, text: 'Completed MS in Computer Science from University of Toledo,OH, USA', },
-  
+  { year: 2024, text: 'Started working as Software Engineer at Blink Voice, NY, USA', },
 ];
 
 export const publications = [
