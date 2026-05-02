@@ -13,12 +13,20 @@ export const Section = styled.section`
 `;
 
 export const SectionLabel = styled.p`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: ${(props) => props.theme.fonts.mono};
   font-size: 1.1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.muted};
   margin-bottom: 0.8rem;
+
+  svg {
+    color: ${(props) => props.theme.colors.accent};
+    flex-shrink: 0;
+  }
 `;
 
 export const SectionTitle = styled.h2`

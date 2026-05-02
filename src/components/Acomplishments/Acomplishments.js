@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiAward } from 'react-icons/fi';
 
 import { Section, SectionLabel, SectionTitle } from '../../styles/GlobalComponents';
 import { Award, AwardList, AwardText } from './AcomplishmentsStyles';
@@ -12,7 +13,7 @@ const awards = [
 
 const Acomplishments = () => (
   <Section>
-    <SectionLabel>05 — Recognition</SectionLabel>
+    <SectionLabel><FiAward size="1.3rem" />05 — Recognition</SectionLabel>
     <SectionTitle>Certifications & awards.</SectionTitle>
     <AwardList>
       {awards.map((text, i) => (

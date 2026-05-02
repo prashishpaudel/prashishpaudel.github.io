@@ -37,7 +37,15 @@ export const Year = styled.span`
 `;
 
 export const Event = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-size: 1.35rem;
   line-height: 1.45;
   color: ${(props) => props.theme.colors.muted};
+
+  svg {
+    color: ${(props) => props.theme.colors.accent};
+    flex-shrink: 0;
+  }
 `;

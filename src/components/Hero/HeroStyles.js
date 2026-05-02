@@ -9,12 +9,19 @@ export const HeroWrap = styled.section`
 `;
 
 export const Eyebrow = styled.p`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: ${(props) => props.theme.fonts.mono};
   font-size: 1.15rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.muted};
   margin-bottom: 1.2rem;
+
+  svg {
+    color: ${(props) => props.theme.colors.accent};
+  }
 `;
 
 export const NameTitle = styled.h1`

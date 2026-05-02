@@ -85,6 +85,9 @@ export const Links = styled.div`
 `;
 
 export const ExternalLinks = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-family: ${(props) => props.theme.fonts.mono};
   font-size: 1.1rem;
   letter-spacing: 0.08em;

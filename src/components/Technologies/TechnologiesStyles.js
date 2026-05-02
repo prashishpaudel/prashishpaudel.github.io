@@ -20,12 +20,19 @@ export const Group = styled.div`
 `;
 
 export const GroupTitle = styled.h4`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: ${(props) => props.theme.fonts.display};
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: -0.01em;
   color: ${(props) => props.theme.colors.ink};
   margin: 0;
+
+  svg {
+    color: ${(props) => props.theme.colors.accent};
+  }
 `;
 
 export const TagLine = styled.p`

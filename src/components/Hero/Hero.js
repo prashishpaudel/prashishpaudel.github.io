@@ -1,10 +1,14 @@
 import React from 'react';
+import { FiMapPin } from 'react-icons/fi';
 
 import { Bio, BioMuted, Eyebrow, HeroWrap, NameTitle } from './HeroStyles';
 
 const Hero = () => (
   <HeroWrap>
-    <Eyebrow>Software Engineer · ML / NLP · New York</Eyebrow>
+    <Eyebrow>
+      <FiMapPin size="1.3rem" />
+      Software Engineer · ML / NLP · New York
+    </Eyebrow>
     <NameTitle>
       Prashish <em>Paudel</em>
     </NameTitle>

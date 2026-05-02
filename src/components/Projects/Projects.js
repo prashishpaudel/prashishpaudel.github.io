@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiArrowUpRight, FiGithub, FiLayers } from 'react-icons/fi';
 
 import { projects } from '../../constants/constants';
 import { Section, SectionLabel, SectionTitle } from '../../styles/GlobalComponents';
@@ -19,7 +20,7 @@ const pad = (n) => String(n).padStart(2, '0');
 
 const Projects = () => (
   <Section id="work">
-    <SectionLabel>02 — Selected Work</SectionLabel>
+    <SectionLabel><FiLayers size="1.3rem" />02 — Selected Work</SectionLabel>
     <SectionTitle>Things I’ve built.</SectionTitle>
     <ProjectList>
       {projects.map((p, i) => (
@@ -35,10 +36,10 @@ const Projects = () => (
             </TagRow>
             <Links>
               <ExternalLinks href={p.visit} target="_blank" rel="noreferrer">
-                View ↗
+                View <FiArrowUpRight size="1.2rem" />
               </ExternalLinks>
               <ExternalLinks href={p.source} target="_blank" rel="noreferrer">
-                Source ↗
+                <FiGithub size="1.2rem" /> Source
               </ExternalLinks>
             </Links>
           </ProjectBody>
