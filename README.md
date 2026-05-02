@@ -1,6 +1,6 @@
 # Prashish Paudel — Personal Portfolio
 
-**Live:** [prashishpaudel.github.io](https://prashishpaudel.github.io)
+**Live:** [prashishpaudel.com](https://prashishpaudel.com)
 
 Personal portfolio site built with Next.js and styled-components.
 
