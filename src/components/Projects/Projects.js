@@ -1,45 +1,51 @@
-import React, { useState } from 'react';
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
-import ImageModal from '../ImageModal/ImageModal';
+import React from 'react';
 
-const Projects = () => {
-  const [selectedImg, setSelectedImg] = useState(null);
-  return (
-    <Section nopadding id="projects">
-      <SectionDivider />
-      <SectionTitle main>Projects</SectionTitle>
-      <GridContainer>
-        {projects.map((p, i) => {
-          return(
-          <BlogCard key={i}>
-            <Img src={p.image} onClick={() => setSelectedImg(p.image)} />
-            <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
-              <br />
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={p.visit} target="_blank">Code</ExternalLinks>
-              <ExternalLinks href={p.source} target="_blank">Source</ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        );
-      })}
-      </GridContainer>
-      <ImageModal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-    </Section>
-  
+import { projects } from '../../constants/constants';
+import { Section, SectionLabel, SectionTitle } from '../../styles/GlobalComponents';
+import {
+  ExternalLinks,
+  Links,
+  ProjectBody,
+  ProjectDesc,
+  ProjectItem,
+  ProjectList,
+  ProjectNumber,
+  ProjectTitle,
+  Tag,
+  TagRow,
+} from './ProjectsStyles';
+
+const pad = (n) => String(n).padStart(2, '0');
+
+const Projects = () => (
+  <Section id="work">
+    <SectionLabel>02 — Selected Work</SectionLabel>
+    <SectionTitle>Things I’ve built.</SectionTitle>
+    <ProjectList>
+      {projects.map((p, i) => (
+        <ProjectItem key={p.id}>
+          <ProjectNumber>{pad(i + 1)}</ProjectNumber>
+          <ProjectBody>
+            <ProjectTitle>{p.title}</ProjectTitle>
+            <ProjectDesc>{p.description}</ProjectDesc>
+            <TagRow>
+              {p.tags.map((t, ti) => (
+                <Tag key={ti}>{t}</Tag>
+              ))}
+            </TagRow>
+            <Links>
+              <ExternalLinks href={p.visit} target="_blank" rel="noreferrer">
+                View ↗
+              </ExternalLinks>
+              <ExternalLinks href={p.source} target="_blank" rel="noreferrer">
+                Source ↗
+              </ExternalLinks>
+            </Links>
+          </ProjectBody>
+        </ProjectItem>
+      ))}
+    </ProjectList>
+  </Section>
 );
-    }
+
 export default Projects;

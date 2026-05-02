@@ -1,40 +1,43 @@
-import React, { useState } from 'react';
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, TitleContent, UtilityList, Img, ConferenceName } from './PublicationStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { publications } from '../../constants/constants';
-import ImageModal from '../ImageModal/ImageModal';
+import React from 'react';
 
-const Publication = () => {
-  const [selectedImg, setSelectedImg] = useState(null);
-  return (
-    <Section nopadding id="publications">
-      <SectionDivider />
-      <SectionTitle main>Publications</SectionTitle>
-      <GridContainer>
-        {publications.map((p, i) => {
-          return (
-            <BlogCard key={i}>
-              <Img src={p.image} onClick={() => setSelectedImg(p.image)} />
-              <TitleContent>
-                <HeaderThree title>{p.title}</HeaderThree>
-                <Hr />
-              </TitleContent>
-              <CardInfo className="card-info">{p.description}</CardInfo>
-              <TitleContent>
-                <ConferenceName>
-                  Conference:{p.publication}
-                </ConferenceName>
-              </TitleContent>
-              <UtilityList>
-                <ExternalLinks href={p.source} target="_blank">Link</ExternalLinks>
-              </UtilityList>
-            </BlogCard>
-          );
-        })}
-      </GridContainer>
-      <ImageModal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-    </Section>
-  );
-}
+import { publications } from '../../constants/constants';
+import { Section, SectionLabel, SectionTitle } from '../../styles/GlobalComponents';
+import {
+  ExternalLinks,
+  Links,
+  PubBody,
+  PubDesc,
+  PubItem,
+  PubList,
+  PubNumber,
+  PubTitle,
+  Venue,
+} from './PublicationStyles';
+
+const pad = (n) => String(n).padStart(2, '0');
+
+const Publication = () => (
+  <Section id="research">
+    <SectionLabel>01 — Research</SectionLabel>
+    <SectionTitle>Published work.</SectionTitle>
+    <PubList>
+      {publications.map((p, i) => (
+        <PubItem key={i}>
+          <PubNumber>{pad(i + 1)}</PubNumber>
+          <PubBody>
+            <PubTitle>{p.title}</PubTitle>
+            <Venue>{p.publication.trim()}</Venue>
+            <PubDesc>{p.description}</PubDesc>
+            <Links>
+              <ExternalLinks href={p.source} target="_blank" rel="noreferrer">
+                Read ↗
+              </ExternalLinks>
+            </Links>
+          </PubBody>
+        </PubItem>
+      ))}
+    </PubList>
+  </Section>
+);
 
 export default Publication;

@@ -1,281 +1,139 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Section = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+  padding: ${(props) => props.nopadding ? '0' : '2.8rem 0'};
   margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
+  max-width: 720px;
+  width: 100%;
   position: relative;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
-    flex-direction: column;
-  }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
-    width: calc(100vw - 32px);
-    flex-direction: column;
+    padding: ${(props) => props.nopadding ? '0' : '2rem 0'};
   }
-`
+`;
+
+export const SectionLabel = styled.p`
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.muted};
+  margin-bottom: 0.8rem;
+`;
 
 export const SectionTitle = styled.h2`
-  font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
-  line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
-  max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+  font-family: ${(props) => props.theme.fonts.display};
+  font-weight: 600;
+  font-size: ${(props) => props.main ? '3.6rem' : '2.8rem'};
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: ${(props) => props.theme.colors.ink};
+  margin-bottom: 1.6rem;
 
-  @media ${props => props.theme.breakpoints.md}{
-    font-size: ${(props) => props.main ? '56px' : '48px'};
-    line-height: ${(props) => props.main ? '56px' : '48px'};
-    margin-bottom: 12px;
-    padding: ${(props) => props.main ? '40px 0 12px' : '0'};
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: ${(props) => props.main ? '2.8rem' : '2.2rem'};
   }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => props.main ? '28px' : '32px'};
-    line-height: ${(props) => props.main ? '32px' : '40px'};
-    margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
-  }
-`
+`;
 
 export const SectionText = styled.p`
-  max-width: 800px;
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: 300;
-  padding-bottom: 3.6rem;
-  color: rgba(255, 255, 255, 0.5);
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    max-width: 670px;
-    font-size: 20px;
-    line-height: 32px;
-    padding-bottom: 24px;
-  }
+  max-width: 640px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: ${(props) => props.theme.colors.muted};
+  margin-bottom: 1.6rem;
+  font-weight: 400;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
-    padding-bottom: 16px;
+    font-size: 1.6rem;
   }
-`
+`;
 
-export const SectionDivider = styled.div`
+export const SectionDivider = styled.hr`
+  border: 0;
+  height: 1px;
+  background: ${(props) => props.theme.colors.rule};
+  margin: ${(props) => props.divider ? '6rem 0' : '3rem 0'};
+  width: 100%;
+`;
 
-  width: 64px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: #fff;
-  background: ${(props) => props.colorAlt ? 
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 48px;
-    height: 4px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 2px;
-  }
-`
 export const SectionSubText = styled.p`
-  max-width: 800px;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: ${(props) => props.theme.colors.muted};
+`;
 
-@media ${(props) => props.theme.breakpoints.md} {
-    max-width: 672px;
-    font-size: 16px;
-    line-height: 25px;
-  }
+export const Mono = styled.span`
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: ${(props) => props.theme.colors.muted};
+`;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-    line-height: 22px;
-  }
-`
+export const Rule = styled.div`
+  height: 1px;
+  background: ${(props) => props.theme.colors.rule};
+  width: 100%;
+`;
+
+// Legacy passthroughs — editorial text link style
 export const SecondaryBtn = styled.button`
-  color: #FFF;
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.ink};
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 999px;
-  padding: 16px 24px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 16px;
-  width: fit-content;
-  margin-top: 32px;
-  margin-bottom: 80px;
+  border: none;
+  border-bottom: 1px solid ${(props) => props.theme.colors.ink};
+  padding: 0.6rem 0;
   cursor: pointer;
-  transition: 0.4s ease;
-  &:focus {
-    outline: none;
-  }
+  transition: color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    color: #0f1624;
-    background: #fff;
-    border: 1px solid #fff;
+    color: ${(props) => props.theme.colors.accent};
+    border-color: ${(props) => props.theme.colors.accent};
   }
 
-  &:active {
-    background: #e0e4eb;
-    border: 1px solid #304169;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
-
-  @media ${(props) => props.theme.breakpoints.md}{
-    margin-top: 24px; 
-    margin-bottom: 64px;
-    padding: 16px 24px;
-    width: fit-content;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin-top: 16px;
-    margin-bottom: 40px;
-    padding: 8px 16px;
-    width: 100%;
-    font-size: 14px;
-    line-height: 16px;
-  }
-`
+  &:focus { outline: none; }
+`;
 
 export const ButtonBack = styled.div`
-  width: ${({ alt }) => alt ? '150px' : '262px'};
-  height: ${({ alt }) => alt ? '52px' : '64px'};
-  border-radius: 50px;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
-  font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
-  color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
-  cursor: pointer;
-  transition: 0.5s ease;
   position: relative;
-  overflow: hidden;
-  opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: ${({ alt }) => alt ? '150px' : '184px'};
-    height: ${({ alt }) => alt ? '52px' : '48px'};
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
-    margin-bottom: ${({ alt }) => alt ? '0' : '64px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-    height: 32px;
-    font-size: 14px;
-    margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
-  }
-`
+  cursor: pointer;
+`;
 
 export const ButtonFront = styled.button`
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.ink};
+  background: none;
   border: none;
-  border-radius: 50px;
-  color: #fff;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-  opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-  transition: .4s ease;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
+  border-bottom: 1px solid ${(props) => props.theme.colors.ink};
+  padding: 0.6rem 0;
   cursor: pointer;
-  box-shadow: ${({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)' : 'none'};
+  transition: color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    opacity: 0;
-  }
-  &:focus {
-    outline: none;
-  }
-  &:active {
-    opacity: 1;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+    color: ${(props) => props.theme.colors.accent};
+    border-color: ${(props) => props.theme.colors.accent};
   }
 
-  &:disabled{
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
-    opacity: 0.5;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-  }
-`
+  &:focus { outline: none; }
+`;
 
 export const LinkContainer = styled.div`
-  margin-left: ${({ large }) => large ? '24px' : '16px'};
-  transition: 0.3s ease;
-  justify-content: center;
-  border-radius: 50px;
-  padding: 8px;
+  display: inline-flex;
+  margin-left: ${({ large }) => large ? '2rem' : '1.2rem'};
+  transition: opacity 0.2s ease;
 
-  &:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    margin-left: ${({ large }) => large ? '16px' : '8px'};
-
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: ${({ large }) => large ? '0' : '8px'};
-  }
-`
+  &:hover { opacity: 0.6; cursor: pointer; }
+`;
 
 export const LinkIconImg = styled.div`
-  display: flex;  
-  height: ${({ large }) => large ? '32px' : '24px'};
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    height: ${({ nav }) => nav ? '16px' : '24px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    height: ${({ large }) => large ? '32px' : '16px'};
-  }
-`
+  display: flex;
+  height: ${({ large }) => large ? '2rem' : '1.6rem'};
+`;

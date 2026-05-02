@@ -1,123 +1,101 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  overflow: hidden;
-`
+export const ProjectList = styled.ul`
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid ${(props) => props.theme.colors.rule};
+`;
 
-export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
+export const ProjectItem = styled.li`
+  padding: 1.8rem 0;
+  border-bottom: 1px solid ${(props) => props.theme.colors.rule};
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.6rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 2.4rem 1fr;
+    gap: 1.2rem;
+    padding: 1.4rem 0;
+  }
+`;
+
+export const ProjectNumber = styled.span`
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: ${(props) => props.theme.colors.soft};
+  padding-top: 0.6rem;
+`;
+
+export const ProjectBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
-
-`
-export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
-  min-height: 600px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-  }
-`;
-export const TitleContent = styled.div`
-  text-align: center;
-  z-index: 20;
-  width: 100%;
-  font-weight:600;
-  color:#95f5e2;
-
+  gap: 0.6rem;
 `;
 
+export const ProjectTitle = styled.h3`
+  font-family: ${(props) => props.theme.fonts.display};
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: ${(props) => props.theme.colors.ink};
+  margin: 0;
 
-export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: .5rem 0;
-  min-height:80px;
-  font-size: ${(props) => props.title ? '2.5rem' : '2rem'};
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0 2.5rem;
+    font-size: 1.7rem;
   }
 `;
 
-export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
+export const ProjectDesc = styled.p`
+  font-size: 1.4rem;
+  line-height: 1.55;
+  color: ${(props) => props.theme.colors.muted};
+  max-width: 620px;
+  margin: 0.2rem 0 0.2rem;
 `;
 
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
-
-export const CardInfo = styled.p`
-  width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
-  font-style: 2rem;
-  line-height: 24px;
-  text-align: justify;
-  min-height:150px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding:2.5rem
-  
-}
-`;
-
-
-export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
+export const TagRow = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: ${(props) => props.theme.colors.soft};
+  margin-top: 0.2rem;
+`;
+
+export const Tag = styled.span`
+  &::after {
+    content: '·';
+    margin-left: 1.2rem;
+    color: ${(props) => props.theme.colors.rule};
+  }
+  &:last-child::after {
+    content: '';
+  }
+`;
+
+export const Links = styled.div`
+  display: flex;
+  gap: 1.4rem;
+  margin-top: 0.4rem;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
+  font-family: ${(props) => props.theme.fonts.mono};
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.ink};
+  border-bottom: 1px solid ${(props) => props.theme.colors.ink};
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
 
-}
+  &:hover {
+    color: ${(props) => props.theme.colors.accent};
+    border-color: ${(props) => props.theme.colors.accent};
+  }
 `;
-
-export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-flex-wrap: wrap;
-gap: 1rem;
-`
-export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-
-`
