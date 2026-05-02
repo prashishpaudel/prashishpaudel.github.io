@@ -6,8 +6,8 @@
     "scripts": {
         "pre-deploy": "npm run out",
         "deploy": "gh-pages -d out",
-        "dev": "next dev",
-        "build": "next build && next export",
+        "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
         "start": "next start"
     },
     "dependencies": {
